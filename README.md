@@ -1,61 +1,30 @@
-# Contributing to Terra-UI
+# React + TypeScript + Vite
 
-👍🎉 First off, thanks for taking the time to contribute! 🎉👍
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
-Please note we have a [code of conduct](https://github.com/Terracode-Dev/terra-ui/blob/main/CODE_OF_CONDUCT.md), please follow it in all your interactions with the project.
+Currently, two official plugins are available:
 
-## Table of Contents
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- [Setting Up the project locally](#setting-up-the-project-locally)
-- [Submitting a Pull Request](#submitting-a-pull-request)
+## Expanding the ESLint configuration
 
-## Setting Up the project locally
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-To install the project you need to have `node` and `npm`
+- Configure the top-level `parserOptions` property like this:
 
-1.  [Fork](https://help.github.com/articles/fork-a-repo/) the project, clone
-    your fork:
-
-    ```sh
-    # Clone your fork
-    git clone git@github.com:Terracode-Dev/terra-ui.git
-
-    # Navigate to the newly cloned directory
-    cd readme-md-generator
-    ```
-
-2.  Your environment needs to be running `node`  and `npm`.
-
-3.  from the root of the project: `npm` to install all dependencies
-
-    - make sure you have latest `npm` version
-
-4.  from the root of the project: `npm start` to run the cli.
-
-> Tip: Keep your `main` branch pointing at the original repository and make
-> pull requests from branches on your fork. To do this, run:
->
-> ```sh
-> git remote add upstream git@github.com:Terracode-Dev/terra-ui.git
-> git fetch upstream
-> git branch --set-upstream-to=upstream/main main
-> ```
->
-> This will add the original repository as a "remote" called "upstream," then
-> fetch the git information from that remote, then set your local `main`
-> branch to use the upstream master branch whenever you run `git pull`. Then you
-> can make all of your pull request branches based on this `main` branch.
-> Whenever you want to update your version of `main`, do a regular `git pull`.
-
-## Submitting a Pull Request
-
-Please go through existing issues and pull requests to check if somebody else is already working on it.
-
-Also, make sure to run the tests and lint the code before you commit your
-changes.
-
-```sh
-npm run test
-npm run lint
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
 ```
+
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
