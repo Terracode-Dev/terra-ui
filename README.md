@@ -22,7 +22,7 @@ To install the project you need to have `node` and `npm`
     git clone git@github.com:Terracode-Dev/terra-ui.git
 
     # Navigate to the newly cloned directory
-    cd readme-md-generator
+    cd terra-ui
     ```
 
 2.  Your environment needs to be running `node`  and `npm`.
