@@ -25,7 +25,7 @@ export default function Dashboard() {
             </CardContent>
           </Card> 
             
-          <Card  className="col-span-2">
+          <Card  className="col-span-2 ">
             <CardHeader>
               <CardTitle>Recent Sales</CardTitle>
             </CardHeader>

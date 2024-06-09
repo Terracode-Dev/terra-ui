@@ -26,7 +26,7 @@ const data: cardData []=[
     {
     title:"Total Revenue",
     icon:<DollarSign/>,
-    content:"Pakada balanne",
+    content:"Pa balanne",
     desc:"+20.1% from last month"
     },
     {
