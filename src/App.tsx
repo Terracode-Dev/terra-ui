@@ -1,17 +1,14 @@
 import { useState } from "react"
 import { Button } from "./components/base/ui/button"
+import Table1 from "./components/block/Table1";
+import Tables from "./components/block/Tables";
+import PaymentOrder from "./components/block/PaymentOrder";
 
 function App() {
-  const [data, setData] = useState(0);
-
-  const handle = () => {
-    setData(data + 1);
-  }
 
   return (
     <div>
-      <h1 className="text-red-400">{data}</h1>
-      <Button onClick={handle}>increment</Button>
+      <Table1/>
     </div>
   )
 }
