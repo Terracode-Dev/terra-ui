@@ -27,7 +27,7 @@ function Login(){
             
             <div className="flex flex-col items-center justify-center flex-1 bg-white">
                 <div className="w-full max-w-md p-6 py-10" >
-                <Link to='/notification'>Notification</Link> 
+                
                 
                 <h1 className="mt-2.5 text-3xl font-bold ">LogIn</h1>
                 <p className="mt-2.5 mb-8 text-gray-600">login to account to see more</p>
