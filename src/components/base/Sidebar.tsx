@@ -141,16 +141,30 @@ export default function Sidebar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="flex flex-col">
-                <nav className="grid gap-2 text-lg font-medium">
-                {
+            <div className="flex-1">
+            <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
+            {
                     topItems.map((item, index) => (
-                        <NavLink to={item.path} key={index} className={itemsStyleActive} onClick={()=>setTitle(item.name)}>
+                        <NavLink to={item.path} key={index} className={itemsStyle} onClick={()=>setTitle(item.name)} >
                             <div>{item.icon}</div>
                             <div >{item.name}</div>
                         </NavLink>
                     ))
-                } 
-                </nav>
+                }   
+            </nav>
+          </div>
+          <div className="flex-1">
+          <nav className="grid items-start px-2 text-sm font-medium border-t border-gray-300 lg:px-4">
+            {
+                    bottomItems.map((item, index) => (
+                        <NavLink to={item.path} key={index} className={itemsStyle} onClick={() => setTitle(item.name)}>
+                            <div>{item.icon}</div>
+                            <div >{item.name}</div>
+                        </NavLink>
+                    ))
+                }   
+            </nav>
+          </div>
               
             </SheetContent>
           </Sheet>
