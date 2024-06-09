@@ -1,11 +1,18 @@
+//import React from 'react';
+import { DialogDemo } from "./Pages/Addtable";
+import { IView } from "./Pages/ItemView";
+//import {IView} from "./Pages/ItemView";
+//import {DialogDemo} from "./Pages/Addtable";
+//import { Update } from "vite/types/hmrPayload.js";
+//import AddItem from "./Pages/UpdateForm";
 
 function App() {
-
   return (
-    <div>
-      <h1 className="text-red-400">hello world!</h1>
-    </div>
+  <>
+    <IView />
+  </>
   )
 }
 
-export default App
+export default App;
+
