@@ -24,7 +24,7 @@ const data: cardData []=[
     desc:"+20.1% from last month"
     },
     {
-    title:"Total Revenue",
+    title:"Total Hello",
     icon:<DollarSign/>,
     content:"Pa balanne",
     desc:"+20.1% from last month"

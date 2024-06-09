@@ -36,8 +36,8 @@ export default function Sidebar() {
 
   const [title, setTitle] = useState('TerraLink')
     
-    const itemsStyle= "flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary focus:text-black"
-    const itemsStyleActive= "mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground focus:text-black"
+    const itemsStyle= "flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary focus:text-primary "
+    const itemsStyleActive= "mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground focus:text-primary"
     const topItems = [
         {
             name: 'Dashboard',
@@ -83,8 +83,6 @@ export default function Sidebar() {
         }
     ]
   return (
-
-
     <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
       <div className="hidden border-r bg-muted/40 md:block">
         <div className="flex h-full max-h-screen flex-col gap-2">
@@ -93,13 +91,12 @@ export default function Sidebar() {
               <Package2 className="h-6 w-6" />
               <span className="">TerraLink</span>
             </Link>
-
-            <Link to="/notification" className="ml-auto" >
-            <Button  variant="outline" size="icon" className="ml-auto h-8 w-8" onClick={()=>setTitle("Notification")}>
+            <Link to="/notification" className="ml-auto h-8 w-8" onClick={()=>setTitle("Notification")}>
+            <Button variant="outline" size="icon" className="ml-auto h-8 w-8" >
               <Bell className="h-4 w-4" />
+              <span className="sr-only">Toggle notifications</span>
             </Button>
             </Link>
-        
           </div>
           <div className="flex-1">
             <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
@@ -117,7 +114,7 @@ export default function Sidebar() {
           <nav className="grid items-start px-2 text-sm font-medium border-t border-gray-300 lg:px-4">
             {
                     bottomItems.map((item, index) => (
-                        <NavLink to={item.path} key={index} className={itemsStyle} onClick={() => setTitle(item.name)}>
+                        <NavLink to={item.path} key={index} className={itemsStyle} onClick={()=>setTitle(item.name)}>
                             <div>{item.icon}</div>
                             <div >{item.name}</div>
                         </NavLink>
@@ -145,26 +142,26 @@ export default function Sidebar() {
             <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
             {
                     topItems.map((item, index) => (
-                        <NavLink to={item.path} key={index} className={itemsStyle} onClick={()=>setTitle(item.name)} >
+                        <NavLink to={item.path} key={index} className={itemsStyleActive} onClick={()=>setTitle(item.name)} >
                             <div>{item.icon}</div>
                             <div >{item.name}</div>
                         </NavLink>
                     ))
                 }   
             </nav>
-          </div>
-          <div className="flex-1">
-          <nav className="grid items-start px-2 text-sm font-medium border-t border-gray-300 lg:px-4">
-            {
-                    bottomItems.map((item, index) => (
-                        <NavLink to={item.path} key={index} className={itemsStyle} onClick={() => setTitle(item.name)}>
-                            <div>{item.icon}</div>
-                            <div >{item.name}</div>
-                        </NavLink>
-                    ))
-                }   
-            </nav>
-          </div>
+            </div>
+            <div className="flex-1">
+            <nav className="grid items-start px-2 text-sm font-medium border-t border-gray-300 lg:px-4">
+              {
+                      bottomItems.map((item, index) => (
+                          <NavLink to={item.path} key={index} className={itemsStyleActive} onClick={()=>setTitle(item.name)}>
+                              <div>{item.icon}</div>
+                              <div >{item.name}</div>
+                          </NavLink>
+                      ))
+                  }   
+              </nav>
+            </div>
               
             </SheetContent>
           </Sheet>
