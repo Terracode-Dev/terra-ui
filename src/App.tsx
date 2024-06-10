@@ -10,9 +10,7 @@ import Notification from './pages/Notification';
 import Billing from './pages/Billing';
 import PaymentOrder from "./components/block/PaymentOrder";
 
-
 function App() {
-
   return (
 
     <BrowserRouter>
