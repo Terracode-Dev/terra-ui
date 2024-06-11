@@ -1,5 +1,5 @@
 
-import Sidebar from './base/Sidebar'
+import Sidebar from './blocks/Sidebar'
 import { ThemeProvider } from './base/ui/themeProvider'
 
 export default function Layout() {

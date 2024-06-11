@@ -5,9 +5,9 @@ import {
   CardTitle,
 } from "@/components/base/ui/card";
 
-import { Overview } from "@/components/base/overview";
-import DashCard from "@/components/base/DashCard";
-import DashRecent from "@/components/base/DashRecent";
+import { Overview } from "@/components/blocks/overview";
+import DashCard from "@/components/blocks/DashCard";
+import DashRecent from "@/components/blocks/DashRecent";
 
 export default function Dashboard() {
   return (

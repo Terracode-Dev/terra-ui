@@ -1,10 +1,11 @@
+import Tables from "@/components/blocks/Tables";
 
 
 
 export default function Database() {
   return (
     <div>
-      Database
+      <Tables/>
     </div>
   )
 }

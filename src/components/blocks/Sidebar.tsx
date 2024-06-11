@@ -30,7 +30,7 @@ import {
 import { Input } from "@/components/base/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/base/ui/sheet"
 
-import { ModeToggle } from "./ui/modeToggle"
+import { ModeToggle } from "../base/ui/modeToggle"
 
 export default function Sidebar() {
 
