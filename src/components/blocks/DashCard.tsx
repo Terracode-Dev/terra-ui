@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '../base/ui/card'
 import { DollarSign } from 'lucide-react'
 import { FaMoneyBill } from 'react-icons/fa'
 
