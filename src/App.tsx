@@ -10,9 +10,7 @@ import Notification from './pages/Notification';
 import Billing from './pages/Billing';
 
 
-
 function App() {
-
   return (
 
     <BrowserRouter>
